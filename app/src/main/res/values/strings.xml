@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SurfBreak</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+    <string name="title_activity_create_map">CreateMapActivity</string>
+    <string name="title_activity_display_this_map">DisplayThisMapActivity</string>
+    <string name="title_activity_display_all_map">DisplayAllMapActivity</string>
+    <string name="name">Name :</string>
+    <string name="point_break">Point break</string>
+</resources>
