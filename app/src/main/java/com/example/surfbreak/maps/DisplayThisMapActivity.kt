@@ -49,6 +49,7 @@ class DisplayThisMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val pos = intent.getIntExtra("position", -1)
         val spot = DataManager.spots[pos]
+
         val location = spot.longitude?.let { spot.latitude?.let { it1 -> LatLng(it1, it) } }
 
         val marker = location?.let { MarkerOptions().position(it) }?.let { mMap.addMarker(it) }

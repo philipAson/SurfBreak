@@ -57,6 +57,7 @@ class RecyclerActivity2 : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
     // Menu user edit list button functionality
+    @SuppressLint("SuspiciousIndentation")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.mIUserList)
         userListFragment()

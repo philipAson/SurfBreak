@@ -1,5 +1,6 @@
 package com.example.surfbreak
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +35,22 @@ class UserListRecyclerAdapter( val userList: List<SurfBreak>):
     override fun getItemCount() = userList.size
 
     fun removeUserSpot(position: Int) {
+        val name = DataManager.userSpots[position].name
+        val docId = DataManager.userSpots[position].documentId
+
+            docRef.document(docId).delete().addOnSuccessListener { document ->
+                if (document != null) {
+                    Log.d("!!!","DocumentSnapshot data: $docId")
+                } else {
+                    Log.d("!!!", "no such document")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d("!!!","get failed with $exception")
+            }
+        Log.d("!!!", name.toString())
         DataManager.userSpots.removeAt(position)
+
         notifyDataSetChanged()
     }
 

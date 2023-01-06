@@ -20,7 +20,6 @@ class UserListFragment(): Fragment() {
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.userListRecyclerView)
         recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(false)
         adapter = UserListRecyclerAdapter(DataManager.userSpots)
         recyclerView.adapter = adapter
 
